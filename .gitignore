@@ -1,0 +1,8 @@
+#Compiled Executables and Debug files
+*.exe
+*.ilk
+*.pdb
+*.obj
+
+#Editor Settings
+.vscode/
