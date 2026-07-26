@@ -23,7 +23,7 @@ int main(){
 	}else if (oper =='*'){
 		std::cout<< num1 <<" "<< oper << " "<< num2<< " = " << num1 * num2;
 	}else if(oper =='/'){
-		if ( oper != 0)	{	
+		if ( num2 != 0)	{	
 			std::cout<< num1 <<" "<< oper << " "<< num2 << " = " << num1 / num2;
 		} else{
 			std::cout<<"Division by Zero is undefined.";
