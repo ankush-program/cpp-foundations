@@ -3,7 +3,11 @@
 double input_num(){
 	std::cout<<"Enter an number: ";
 	double num{};
-	std::cin>> num;
+	while (!(std::cin>>num)){
+        std::cout<<"Invalid Input. Please enter an integer: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    } 
 	return num;
 }
 
