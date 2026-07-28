@@ -1,8 +1,13 @@
 #include <iostream>
+#include <limits>
 
 double getUserinput(){
 	double num{};
-	std::cin>>num;
+	while (!(std::cin>>num)){
+        std::cout<<"Invalid Input. Please enter an integer: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    } 
 	return num;
 }
 
@@ -21,8 +26,7 @@ int main(){
 	double monthly_increment_percentage{getUserinput()};
 
 	std::cout<<"Enter months: ";
-	int months{};
-	std::cin>>months;
+	double months{getUserinput()};
 
 	std::cout<<"Per month Salary after "<<months<<" months: "<<increment(initial_salary, monthly_increment_percentage, months);
 	return 0;
