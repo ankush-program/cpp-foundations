@@ -8,8 +8,8 @@ int main(){
 
     /* int x = 3; //copy initialisation
     int x(4); //direct initialisation
-    int x7; //direct list initialisation
-    int x = 7; //copy list initialisation   
+    int x{7}; //direct list initialisation
+    int x = {7}; //copy list initialisation   
     int x; //value initialisation 
     */
     return 0;
