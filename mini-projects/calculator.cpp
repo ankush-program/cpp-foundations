@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 
 double input_num(){
 	std::cout<<"Enter an number: ";
