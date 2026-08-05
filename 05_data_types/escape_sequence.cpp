@@ -8,7 +8,7 @@ int main(){
     std::cout<<"Choose an Escape sequence to see it in action:\n";
     std::cout<< "1. \\a (Alert/Beep)\n";
     std::cout<< "2. \\n (Newline)\n";
-    std::cout<< "3. \\t (Horizontal Tab)\n";
+    std::cout<< "3. \\t (Horizontal Tab), \\v (Vertical Tab)\n";
     std::cout<< "4. \\b (Backspace)\n";
     std::cout<< "5. \\r (Carriage Return)\n";
     std::cout<< "6. \\f (Formfeed)\n";
@@ -21,9 +21,10 @@ int main(){
     if (choice == 1){
         std::cout<<"\\a produce an alert/beep sound\n\aBeep....";   //to hear the soung open the exe in cmd, as most IDEs block sound
     } else if (choice == 2){
-        std::cout<<"\\n shifts the cursor to next line.Eg.\nA\nB\nC\n";
+        std::cout<<"\\n pulls the cursor all the way back to the left edge of the screen .Eg.\nA\nB\nC\n";
     } else if (choice == 3){
-        std::cout<<"\\t produces horizontal tab. Eg.\nName\tID\tScore\n";
+        std::cout<<"\\t produces horizontal tab. Eg.\nName\tID\tScore\tRank\n";
+        std::cout<<"\\v moves the cursor straight down to the next line. It does not pull the cursor back to the left edge. Eg.\nHello\vWorld\vHow are\vyou?";
     } else if (choice == 4){
         std::cout<<"\\b moves the cursor back one space, so the next character overwrites\n";
         std::cout<<"printing C+-, \\b encounterd,so going back one space and overwriting the - with +\n";
