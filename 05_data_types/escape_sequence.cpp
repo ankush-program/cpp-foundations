@@ -13,6 +13,7 @@ int main(){
     std::cout<< "5. \\r (Carriage Return)\n";
     std::cout<< "6. \\f (Formfeed)\n";
     std::cout<< "7. \\\", \\', \\\\ , \\?(Quotes, Slashes, Question mark)\n";
+    std::cout<< "8. \\(number) (Octal) and \\x(number) (Hexadecimal)\n";
 
     int choice{};
     std::cout<<"\nEnter your choice: ";
@@ -39,7 +40,19 @@ int main(){
         std::cout << "(Note: Modern screens don't have 'pages' like old printers did, so it might give a weird symbol here!)\n";
     } else if (choice == 7){
         std::cout<<"\\\" produces one double qoute(\")\n\\' produces one single quote(\')\n\\\\ produces one backlash(\\)\n\\? produces one question mark(\?)\n";
-    }else {
+    } else if (choice == 8){
+        std::cout << "Computers store characters as numbers using the ASCII table.\n";
+        std::cout << "In our normal Decimal system (base-10) ( using 10 digits 0-9), the letter 'A' is the number 65.\n\n";
+
+        std::cout << "But computers also use other number systems:\n";
+        std::cout << "- Octal (base-8) uses 8 digits (0-7). The decimal number 65 is written as 101.\n";
+        std::cout << "  Using \\101 prints: \101\n\n";
+        
+        std::cout << "- Hexadecimal (base-16) uses 16 digits (0-9 and A, B, C, D, E, F). The decimal number 65 is written as 41.\n";
+        std::cout << "  Using \\x41 prints: \x41\n\n";
+        
+        std::cout << "Mix them! H\\x65ll\\157 prints: H\x65ll\157\n";
+    } else {
         std::cout<<"Choose an integer from 1 to 7\n";
     } 
     
