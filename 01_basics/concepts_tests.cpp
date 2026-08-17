@@ -10,7 +10,7 @@ int main(){
     int x(4); //direct initialisation
     int x{7}; //direct list initialisation
     int x = {7}; //copy list initialisation   
-    int x; //value initialisation 
+    int x{}; //value initialisation 
     */
     return 0;
 }
