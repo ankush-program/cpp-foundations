@@ -1,6 +1,6 @@
 # C++ Learning Log ⚙️
 
-This repository is my daily tracker as I learn C++ from the ground up.
+This repository is my daily tracker as I learn C++ from learncpp.com
 
 ## 🎯 Current Focus
 *   Getting comfortable with modern C++ habits.
