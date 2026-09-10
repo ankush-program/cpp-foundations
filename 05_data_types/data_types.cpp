@@ -3,6 +3,8 @@
 #include <iostream>
 #include <iomanip> //for std::setw
 
+// std::setw( ) only affects the very next item pushed to the stream only. after that item prints, the width rests back to 0
+
 void printIntegerSizes(){
     std::cout<<std::setw(40)<<"Size of int is: "<<sizeof(int)<<'\n';
     std::cout<<std::setw(40)<<"Size of short int (or short) is: "<<sizeof(short)<<'\n';
@@ -25,8 +27,18 @@ void printFloatingPointSizes(){
 }
 int main(){
     std::cout<<"\n---------- Size of Data Types (in Bytes): ----------\n\n";
+    
+    std::cout<<std::setw(40)<<"Size of int is: "<<sizeof(int)<<'\n'; // Right alignment here 
 
-    std::cout<<std::left; //left justify
+    // Right alignment is the Default Alignment in C++
+    std::cout<<std::left; // Setting Left Alignment for all next outputs
+
+    // std::setfill('.') fills the remaining width with . (dot)
+    std::cout<<std::setw(40)<<std::setfill('.')<<"Size of int is: "<<sizeof(int)<<'\n';
+
+    std::cout<<std::setw(3)<<"Size of int is: "<<sizeof(int)<<'\n'; // If the very next item is longer than width, then overflow(no truncation)
+
+    std::cout<<std::setfill(' '); // Again setting remaining width with whitespace
 
     printIntegerSizes();
     printBooleanSizes();

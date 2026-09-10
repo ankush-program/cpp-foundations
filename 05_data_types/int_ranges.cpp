@@ -20,7 +20,7 @@ int main(){
     // Range: -(2^(n-1)) to (2^(n-1))-1    ,( 1 bit store sign, (n-1) bits store magnitude)
     // For 16 bit signed integer, range is -32768 to 32767
 
-    signed short int y{32767};  // or int x{}; both same as by default, integers are signed  in cpp
+    signed short int y{32767};  // or short int x{}; or short x{}; all are same as by default, integers are signed in cpp
     std::cout<<"Size of y(signed short) is: "<<sizeof(y)<<" Bytes\n"<<"y (max) = "<<y <<'\n';
 
     y = y + 1;
