@@ -4,35 +4,24 @@ int main()
 {
     //----------------------- CONDITIONAL OPERATOR -----------------------
 
-    // The conditional operator is also called
-    // the ternary operator.
+    // The conditional operator is also called the ternary operator.
 
     // Syntax:
-    //
     // condition ? expressionIfTrue : expressionIfFalse
 
 
     int age { 20 };
 
-    // If age >= 18 is true,
-    // "adult" is selected.
-    //
-    // Otherwise "minor" is selected.
+    // If age >= 18 is true, "adult" is selected. Otherwise "minor" is selected.
 
-    const char* status {
-        (age >= 18) ? "adult" : "minor"
-    };
-
-    std::cout << "Status: " << status << '\n';
+    std::cout << "Status: " << ((age >= 18) ? "adult" : "minor") << '\n';
 
 
     //----------------------- SIMPLE EXAMPLE -----------------------------
 
     int number { 7 };
 
-    int result {
-        (number % 2 == 0) ? 0 : 1
-    };
+    int result { (number % 2 == 0) ? 0 : 1 };
 
     std::cout << "Result: " << result << '\n';
 
@@ -42,34 +31,15 @@ int main()
     int a { 10 };
     int b { 20 };
 
-    int larger {
-        (a > b) ? a : b
-    };
+    int larger { (a > b) ? a : b };
 
-    std::cout << "Larger number: "
-              << larger << '\n';
-
-
-    //----------------------- FUNCTION RETURN ---------------------------
-
-    auto isPositive = [](int value)
-    {
-        return (value > 0) ? true : false;
-    };
-
-    std::cout << std::boolalpha;
-    std::cout << "Is 5 positive? "
-              << isPositive(5) << '\n';
-
+    std::cout << "Larger number: "<< larger << '\n';
 
     //----------------------- CONDITIONAL OPERATOR IN OUTPUT -------------
 
     int score { 75 };
 
-    std::cout
-        << "Result: "
-        << ((score >= 50) ? "Pass" : "Fail")
-        << '\n';
+    std::cout<< "Result: "<< ((score >= 50) ? "Pass" : "Fail")<< '\n';
 
 
     //----------------------- READABILITY -------------------------------
@@ -85,8 +55,7 @@ int main()
     std::cout << "Minimum: " << minimum << '\n';
 
     // Avoid putting complicated logic inside a ternary operator.
-    // If the condition becomes difficult to understand,
-    // use a normal if/else statement instead.
+    // If the condition becomes difficult to understand, use a normal if/else statement instead.
 
     return 0;
 }

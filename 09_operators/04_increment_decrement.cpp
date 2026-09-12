@@ -27,11 +27,8 @@ int main()
     int a { 5 };
 
     // Prefix:
-    //
     // ++a
-    //
-    // The variable is incremented first.
-    // Then its new value is used.
+    // The variable is incremented first. Then its new value is used.
 
     int result1 { ++a };
 
@@ -44,12 +41,8 @@ int main()
     int b { 5 };
 
     // Postfix:
-    //
-    // b++
-    //
-    // The old value is used first.
-    // Then b is incremented.
-
+    // The old value is used first. Then b is incremented.
+    // In Postfix increment, a temporary copy of the variable is created and returned/used, original inremented
     int result2 { b++ };
 
     std::cout << "b = " << b << '\n';
@@ -78,8 +71,7 @@ int main()
 
     //----------------------- SIMPLE LOOP -------------------------------
 
-    // Increment operators are commonly used
-    // when repeatedly changing a counter.
+    // Increment operators are commonly used when repeatedly changing a counter.
 
     for (int i { 0 }; i < 5; ++i)
     {
@@ -89,14 +81,12 @@ int main()
 
     //----------------------- BEST PRACTICE ------------------------------
 
-    // When the old value is not needed,
-    // prefer prefix increment/decrement:
+    // When the old value is not needed, prefer prefix increment/decrement:
 
     ++x;
     --x;
 
-    // This clearly communicates that we simply want
-    // to change the variable.
+    // This clearly communicates that we simply want to change the variable.
 
     return 0;
 }

@@ -46,14 +46,14 @@ int main()
     //----------------------- REMAINDER WITH NEGATIVE VALUES ------------
 
     // The sign of the result follows the rules of C++ arithmetic.
-
+    // answer contains the sign of numerator
     std::cout << "10 % -3 = " << 10 % -3 << '\n';
     std::cout << "-10 % 3 = " << -10 % 3 << '\n';
 
 
     //----------------------- EXPONENTIATION -----------------------------
 
-    // C++ does NOT have a built-in exponentiation operator such as **.
+    // C++ does NOT have a built-in exponentiation operator such as ^.
 
     // The ^ operator is NOT exponentiation.
     //
